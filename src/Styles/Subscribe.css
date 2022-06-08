@@ -1,0 +1,45 @@
+.subscribe {
+width: 90%;
+
+display: flex;
+
+}
+.imgSubscribe{
+  width:40em;
+  position: relative;
+  
+
+}
+
+#textsubscribe {
+  width: 30em;
+  height: 16em;
+  padding-left: 1em;
+  padding-top: 3em;
+  color:black;
+  background-color: whitesmoke;
+  display:flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-top: 5.6em;
+  position: absolute;
+  left: 20em;
+
+
+ }
+
+.titlesubscribe {
+  font-weight:700;
+  font-size: 1.2em;
+  padding-bottom: 2em;
+
+
+}
+.registro {
+  width: 11.2em;
+  height: 2.5em;
+  border-radius: 1.37em;
+  border: #4B7F55;
+  background-color: #4B7F55;
+  color: white;
+}
