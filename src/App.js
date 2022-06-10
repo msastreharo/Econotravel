@@ -1,16 +1,13 @@
-import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './style.css';
-import CardContact from './Components/CardContact';
+import Home from './components/Home';
 
-
+import './App.css';
 
 function App() {
   return (
-    <div >
-
-     <CardContact />
-
+    <div className="App">
+      <Home />
+      
     </div>
   );
 }
