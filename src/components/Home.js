@@ -9,7 +9,6 @@ export default function Home() {
     <div className="Home">
         <Header />
         <Carrusel /> 
-        <ExperienceHome />
         <Subscribe />
         <Footer />
     </div>
