@@ -1,6 +1,6 @@
 import React from "react";
 import ExperienceNavbar from './ExperienceNavbar.js';
-import ExperienceGridCard from './ExperienceGridCard.js';
+import ExperienceGridCard from '../pages/ExperienceGridCard.js';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Header from './Header.js'
