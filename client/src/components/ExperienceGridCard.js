@@ -1,12 +1,25 @@
-import data from '../dataEx.json'
 import { Row, Col, Card } from 'react-bootstrap';
 import React, { useState, useEffect } from "react";
+import Axios from 'axios';
+
+
 
 const ExperienceGridCard = () =>  {
   
-    let experienceArray = data;
+  const [card, setCard] = useState([]);
+  useEffect(() => {
+    Axios({
+      url: "http://localhost:3000/econoExperience",
+    })
+      .then((response) => {
+        setCard(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [setCard]);
   return (
-    experienceArray.map(item =>(
+    card.map(item =>(
   
       <Col key={item.id}>
         <Card>
