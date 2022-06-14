@@ -22,7 +22,7 @@ const ExperienceGridCard = () =>  {
     card.map(item =>(
   
       <Col key={item.id}>
-        <Card>
+        <Card onClick={() => handleClick()} style={{cursor : 'pointer'}}>
           <Card.Img className='cardImageExper' variant="top" src={item.imagen} />
           <Card.Body>
           <Card.ImgOverlay>
