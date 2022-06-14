@@ -7,18 +7,21 @@ import carritoDeCompra from '../assets/fotos-header/carrito-de-compra.jpg'
 
 
 
+
 function Header (){
     return( 
       <div class="fixed-top">
       <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="#"><img
+      <Nav activeKey="/home" onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
+>
+        <Nav.Link><Navbar.Brand href="#"><img
         src={logo}
         width="70"
         height="50"
         className="d-inline-block align-top"
         alt="React Bootstrap logo"
-      /></Navbar.Brand> 
+      /></Navbar.Brand> </Nav.Link>
         <Form className="d-flex w-50" >
         <FormControl
           type="search" 
@@ -52,6 +55,7 @@ function Header (){
       </Nav.Link>
           </Nav>
         </Navbar.Collapse>
+        </Nav>
       </Container>
     </Navbar>
     </div>
