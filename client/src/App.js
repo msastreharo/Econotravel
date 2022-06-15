@@ -2,7 +2,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Home from './pages/Home.js';
 import Checkout from './components/Checkout.js';
-import Home from './components/Home.js';
 import ExperienceHome from './components/ExperienceHome.js'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import * as ROUTES from '../src/constants/routes';
@@ -19,7 +18,7 @@ function App() {
     <Routes>
            <Route element={<Header/>}>
             <Route path="/" element={<Home />} />
-            <Route path={ROUTES.EXPERIENCES} element={<ExperienceGridCard />} />
+            <Route path="/econoExperience" element={<ExperienceGridCard />} />
             {/*<Route path={ROUTES.EXPERIENCE} element={<Experience />} />
             <Route path={ROUTES.BOOKING} element={<Login />} />*/}
           </Route>
@@ -30,11 +29,9 @@ function App() {
           </Route>
           <Route path="*" element={<NoMatch />} /> */}
         </Routes>
-      <Home />
-      <Checkout />
+     
  
-      <ExperienceHome />
-    </div>
+         </div>
     </Router>
   );
   

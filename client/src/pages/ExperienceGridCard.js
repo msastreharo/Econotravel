@@ -1,28 +1,45 @@
 import { Row, Col, Card } from 'react-bootstrap';
 import React, { useState, useEffect } from "react";
-import Axios from 'axios';
-
+import axios from 'axios';
+import { useSearchParams } from 'react-router-dom';
+import Container from 'react-bootstrap/Container'
+import Footer from '../components/Footer.js'
+import Ubicacion from "../components/Filter/category/Ubicacion.js";
 
 
 const ExperienceGridCard = () =>  {
-  
+  const [searchParams, setSearchParams]= useSearchParams ()
+  const search= searchParams.get('search') || ''
   const [card, setCard] = useState([]);
   useEffect(() => {
-    Axios({
+    axios({
       url: "http://localhost:3000/econoExperience",
     })
       .then((response) => {
-        setCard(response.data);
+        console.log(search)
+        const filterArray=response.data.filter(element=>{
+          if (search!='')
+                   return element.nombre.toLowerCase().includes(search.toLocaleLowerCase())
+         return element })
+         
+        setCard(filterArray)
       })
       .catch((error) => {
         console.log(error);
       });
-  }, [setCard]);
+  }, [search]);
+  
+
+
   return (
-    card.map(item =>(
+    <div className="ExperienceHome">
+    <Container>
+      <Row xs={1} md={2} lg={3} className="g-4" >       
+    {card.map(item =>(
+  
   
       <Col key={item.id}>
-        <Card onClick={() => handleClick()} style={{cursor : 'pointer'}}>
+        <Card style={{cursor : 'pointer'}}>
           <Card.Img className='cardImageExper' variant="top" src={item.imagen} />
           <Card.Body>
           <Card.ImgOverlay>
@@ -46,7 +63,14 @@ const ExperienceGridCard = () =>  {
         </Card>
       </Col>
    
-  )))
+  ))}
+     
+      </Row>
+    </Container>
+    <Ubicacion />
+    <Footer />
+    </div>
+  )
 }
 
 

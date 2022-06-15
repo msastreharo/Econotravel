@@ -1,14 +1,28 @@
-import React from "react"
 import {Navbar, Button, FormControl, Form, Nav, Container} from 'react-bootstrap'
 import logo from '../assets/fotos-header/logo-econo.png'
 import logoMono from '../assets/fotos-header/logoMono.png'
 import carritoDeCompra from '../assets/fotos-header/carrito-de-compra.jpg'
-
+import { Outlet, useNavigate } from "react-router-dom"
+import { useState } from "react"
 
 
 
 
 function Header (){
+    const [input, setInput]= useState ('')
+    const navigate= useNavigate ()
+    const handleChange = (e) => {
+      e.preventDefault()
+      setInput(e.target.value)
+    }
+    const handleSubmit= (e)=> {
+      e.preventDefault()
+      navigate('/econoExperience/?search='+input)
+      setInput('')
+
+      
+    }
+
     return( 
       <div class="fixed-top">
       <Navbar bg="light" expand="lg">
@@ -22,12 +36,17 @@ function Header (){
         className="d-inline-block align-top"
         alt="React Bootstrap logo"
       /></Navbar.Brand> </Nav.Link>
-        <Form className="d-flex w-50" >
+        <Form className="d-flex w-50" onSubmit= {handleSubmit}>
         <FormControl
+             
+
           type="search" 
           placeholder="busca una actividad, un lugar..."
           className="me-2"
           aria-label="Search"
+          onChange= {handleChange}
+          value= {input}
+
         />
       </Form>
 
@@ -58,6 +77,7 @@ function Header (){
         </Nav>
       </Container>
     </Navbar>
+    <Outlet />
     </div>
     )
 } 
