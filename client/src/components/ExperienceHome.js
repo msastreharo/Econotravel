@@ -14,13 +14,7 @@ const ExperienceHome = () => (
     <Header />
     <div><h1 className="ExperienceTitle">Experiencias en el área de Barcelona</h1></div>
     <ExperienceNavbar />
-    <Container>
-      <Row xs={1} md={2} lg={3} className="g-4" >
-        <ExperienceGridCard />
-        <Ubicacion />
-      </Row>
-    </Container>
-    <Footer />
+    
   
   </div>
   );
