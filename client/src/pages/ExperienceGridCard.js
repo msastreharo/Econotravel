@@ -3,10 +3,15 @@ import React, { useState, useEffect } from "react";
 import Axios from 'axios';
 
 
-
 const ExperienceGridCard = () =>  {
   
   const [card, setCard] = useState([]);
+  const [filterLugar, setFilterLugar] = useState([]);
+
+  const handleChange = event => {
+    event.target.value;
+  }
+
   useEffect(() => {
     Axios({
       url: "http://localhost:3000/econoExperience",
@@ -18,6 +23,7 @@ const ExperienceGridCard = () =>  {
         console.log(error);
       });
   }, [setCard]);
+
   return (
     card.map(item =>(
   
