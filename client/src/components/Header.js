@@ -17,7 +17,7 @@ function Header (){
     }
     const handleSubmit= (e)=> {
       e.preventDefault()
-      navigate('/econoExperience/?search='+input)
+      navigate('/experiences/?search='+input)
       setInput('')
 
       
