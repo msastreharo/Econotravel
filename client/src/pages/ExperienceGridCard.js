@@ -5,6 +5,7 @@ import { useSearchParams } from 'react-router-dom';
 import Container from 'react-bootstrap/Container'
 import Footer from '../components/Footer.js'
 import Ubicacion from "../components/Filter/category/Ubicacion.js";
+import ExperienceNavbar from '../components/ExperienceNavbar.js';
 
 
 const ExperienceGridCard = () =>  {
@@ -33,6 +34,8 @@ const ExperienceGridCard = () =>  {
 
   return (
     <div className="ExperienceHome">
+    <div><h1 className="ExperienceTitle">Experiencias en el área de Barcelona</h1></div>
+    <ExperienceNavbar />
     <Container>
       <Row xs={1} md={2} lg={3} className="g-4" >       
     {card.map(item =>(
