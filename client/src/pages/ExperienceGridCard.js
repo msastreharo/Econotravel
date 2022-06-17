@@ -4,7 +4,6 @@ import axios from 'axios';
 import { useSearchParams } from 'react-router-dom';
 import Container from 'react-bootstrap/Container'
 import Footer from '../components/Footer.js'
-import Ubicacion from "../components/Filter/category/Ubicacion.js";
 import ExperienceNavbar from '../components/ExperienceNavbar.js';
 import Header from '../components/Header.js';
 
@@ -12,6 +11,12 @@ const ExperienceGridCard = () =>  {
   const [searchParams, setSearchParams]= useSearchParams ()
   const search= searchParams.get('search') || ''
   const [card, setCard] = useState([]);
+  const [filterLugar, setFilterLugar] = useState([]);
+
+  const handleChange = event => {
+    event.target.value;
+  }
+
   useEffect(() => {
     axios({
       url: "http://localhost:3000/econoExperience",
@@ -76,7 +81,7 @@ const ExperienceGridCard = () =>  {
      
       </Row>
     </Container>
-    <Ubicacion />
+    
     <Footer />
     </div>
     

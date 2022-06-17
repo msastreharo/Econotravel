@@ -17,9 +17,9 @@ const Ubicacion = () => {
     //metrodo filtrado
 
     //renderizar
-  return (
-    <div>Ubicacion</div>
-  )
+  return 
+   
+  
 }
 
 export default Ubicacion
