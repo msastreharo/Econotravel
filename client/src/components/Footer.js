@@ -1,19 +1,30 @@
 import React from "react";
+import qrstyle from '../assets/qrstyle.jpg'
+import { Link } from "react-router-dom"
 
 
 function Footer (){
     return( 
-      <footer className="div-footer"> 
-        <div id="footer-div1">
-          <h4>Como funciona</h4>
-        </div>
-        <div id="footer-div2">
-          <h4>Quienes somos</h4>
-        </div>
-        <div id="footer-div3">
-          <h4>Medio de pago</h4>  
-        </div>
-      </footer>
+      <footer className="div-footer" > 
+        <ul className='infoFooter'>
+          <Link to="/conocenos">
+          <li>Nosotros</li>
+          </Link>
+
+          <Link to="/comofuncionamos">
+          <li>Cómo funciona</li>
+          </Link>
+
+          <Link to="/metodosdepago">
+          <li>Medios de pago</li>
+          </Link>
+
+        </ul>
+        <div className='qrside'>
+      <h4 className='app'>Descargate la app</h4>
+    <img src= {qrstyle} className='qr' />      
+      </div>
+     </footer>
     )
 } 
 

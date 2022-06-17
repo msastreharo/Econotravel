@@ -5,19 +5,20 @@ import NavDropdown from 'react-bootstrap/NavDropdown'
 
 
 
+const filterLugar = ["Montaña", "Playa", "Ciudad"];
 
-const ExperienceNavbar = () => (
+const ExperienceNavbar = ({setFilterLugar}) => (
+  
   <div className="ExperienceNavbar"> 
-    
     <Navbar bg="light" expand="lg">
-      <Container className="justify-content-center" >
+      <Container className="justify-content-center">
         <NavDropdown title="Ubicación" id="basic-nav-dropdown">
-          <NavDropdown.Item href="#action/3.1">Montaña</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.2">Playa</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.3">Ciudad</NavDropdown.Item>
-        </NavDropdown>
+          <NavDropdown.Item >Montaña</NavDropdown.Item >
+          <NavDropdown.Item >Playa</NavDropdown.Item>
+          <NavDropdown.Item >Ciudad</NavDropdown.Item>
+                                                            </NavDropdown>
         <NavDropdown title="Transporte" id="basic-nav-dropdown">
-          <NavDropdown.Item href="#action/3.1">Bicicleta</NavDropdown.Item>
+          <NavDropdown.Item >Bicicleta</NavDropdown.Item>
           <NavDropdown.Item href="#action/3.2">Barco</NavDropdown.Item>
           <NavDropdown.Item href="#action/3.3">A pie</NavDropdown.Item>
         </NavDropdown>

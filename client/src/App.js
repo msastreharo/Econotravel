@@ -10,6 +10,9 @@ import Checkout from './pages/Checkout.js';
 import MyProfile from './pages/MyProfile.js';
 import ExperienceGridCard from './pages/ExperienceGridCard';
 import PaginasExperiences from './pages/PaginasExperiences'
+import Nosotros from './pages/Nosotros'
+import MediosDePago from './pages/MediosDePago'
+import ComoFunciona from './pages/ComoFunciona'
 import Error from './pages/Error';
 //import Experience
 
@@ -25,10 +28,13 @@ function App() {
             <Route exact path="/experiences" element={<ExperienceGridCard />} />
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/singup" element={<Singup />} />
-            <Route path="/checkout" element={<Checkout />} />
+            <Route exact path="/checkout" element={<Checkout />} />
             <Route exact path="/myprofile" element={<MyProfile />} />
             <Route path="/paginasexperiences/:id" element={<PaginasExperiences />} /> 
             <Route path="/paginasexperiences/:id/:checkout" element={<Checkout />} />
+            <Route exact path="/conocenos" element={<Nosotros />} />
+            <Route exact path="/metodosdepago" element={<MediosDePago />} /> 
+            <Route exact path="/comofuncionamos" element={<ComoFunciona />} />
             <Route path="*" element={<Error />} /> 
     </Routes>
      

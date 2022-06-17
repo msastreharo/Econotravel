@@ -4,11 +4,9 @@ import axios from 'axios';
 import { useSearchParams, Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container'
 import Footer from '../components/Footer.js'
-import Ubicacion from "../components/Filter/category/Ubicacion.js";
+
 import ExperienceNavbar from '../components/ExperienceNavbar.js';
 import Header from '../components/Header'
-
-
 const ExperienceGridCard = () =>  {
   const [searchParams, setSearchParams]= useSearchParams ()
   const search= searchParams.get('search') || ''
@@ -23,27 +21,21 @@ const ExperienceGridCard = () =>  {
           if (search!='')
                    return element.nombre.toLowerCase().includes(search.toLocaleLowerCase())
          return element })
-         
         setCard(filterArray)
       })
       .catch((error) => {
         console.log(error);
       });
   }, [search]);
-  
-
-
   return (
-    <div className="ExperienceHome"> 
+    <div className="ExperienceHome">
     <Header />
     <div><h1 className="ExperienceTitle">Experiencias en el área de Barcelona</h1></div>
     <ExperienceNavbar />
     <Container>
-      <Row xs={1} md={2} lg={3} className="g-4" >       
+      <Row xs={1} md={2} lg={3} className="g-4" >
     {card.map(item =>(
-  
-  
-      <Col key={item.id}> 
+      <Col key={item.id}>
         <Link to={`/paginasexperiences/${item.id}`}>
         <Card style={{cursor : 'pointer'}}>
           <Card.Img className='cardImageExper' variant="top" src={item.imagen} />
@@ -69,19 +61,12 @@ const ExperienceGridCard = () =>  {
         </Card>
         </Link>
       </Col>
-   
   ))}
-     
       </Row>
     </Container>
-    <Ubicacion />
+   
     <Footer />
     </div>
   )
 }
-
-
-
-
 export default ExperienceGridCard;
-
