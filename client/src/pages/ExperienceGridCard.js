@@ -6,6 +6,10 @@ import Container from 'react-bootstrap/Container'
 import Footer from '../components/Footer.js'
 import Ubicacion from "../components/Filter/category/Ubicacion.js";
 import ExperienceNavbar from '../components/ExperienceNavbar.js';
+<<<<<<< HEAD
+=======
+import Header from '../components/Header.js';
+>>>>>>> ffdfb40fb60ab982b5d4ef326b9d0d3668bb53eb
 
 const ExperienceGridCard = () =>  {
   const [searchParams, setSearchParams]= useSearchParams ()
@@ -38,14 +42,20 @@ const ExperienceGridCard = () =>  {
 
 
   return (
+    <div>
+       <Header />
+   
     <div className="ExperienceHome">
-    <div><h1 className="ExperienceTitle">Experiencias en el área de Barcelona</h1></div>
+    <div>
+    <h1 className="ExperienceTitle">Experiencias en el área de Barcelona</h1>
+    </div>
+   
+    
     <ExperienceNavbar />
+    </div>
     <Container>
       <Row xs={1} md={2} lg={3} className="g-4" >       
-    {card.map(item =>(
-  
-  
+    {card.map(item =>(  
       <Col key={item.id}>
         <Card style={{cursor : 'pointer'}}>
           <Card.Img className='cardImageExper' variant="top" src={item.imagen} />
@@ -70,7 +80,7 @@ const ExperienceGridCard = () =>  {
           </Card.Body>
         </Card>
       </Col>
-   
+ 
   ))}
      
       </Row>
@@ -78,6 +88,7 @@ const ExperienceGridCard = () =>  {
     <Ubicacion />
     <Footer />
     </div>
+    
   )
 }
 

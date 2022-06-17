@@ -1,16 +1,15 @@
 
-import Button from 'react-bootstrap/Button'
-import Card from 'react-bootstrap/Card'
-import Melanie from '../assests/melanie.jpg'
+import PuenteContact from '../assets/PuenteContact.jpg'
 
 function CardContact() {
     return (
   
 <div className='containerCard'>
-<div className ="card mb-3" />
+<div className='cardshape'>
+<div className ="card mb-2" />
   <div className="row">
     <div className="col-md-4">
-    <img src={Melanie} className ="rounded float-left"  alt="Melanie" style = {{width: "18rem",marginLeft:"10rem" }} />
+    <img src={PuenteContact} className ="rounded float-left"  alt="Melanie" style = {{width: "18rem",marginLeft:"10rem" }} />
    </div> 
     <div className="col-md-4" >
       <div className="card-body">
@@ -25,6 +24,7 @@ function CardContact() {
          </div>
     </div>
   </div>
+</div>
 </div>
 </div>
     
