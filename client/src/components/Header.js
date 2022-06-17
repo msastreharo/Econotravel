@@ -9,66 +9,61 @@ import userprofile from '../assets/userprofile.svg'
 
 
 function Header (){
-    const [input, setInput]= useState ('')
-    const navigate= useNavigate ()
-    const handleChange = (e) => {
-      e.preventDefault()
-      setInput(e.target.value)
-    }
-    const handleSubmit= (e)=> {
-      e.preventDefault()
-      navigate('/experiencies/?search='+input)
-      setInput('')
+  const [input, setInput]= useState ('')
+  const navigate= useNavigate ()
+  const handleChange = (e) => {
+    e.preventDefault()
+    setInput(e.target.value)
+  }
+  const handleSubmit= (e)=> {
+    e.preventDefault()
+    navigate('/experiences/?search='+input)
+    setInput('')
+  }
 
-      
-    }
 
     return( 
-      <div class="fixed-top">
+      <div className="d-flex justify-content-around">
       <Navbar bg="light" expand="lg">
-      <Container fluid='lg'>
-      <Nav activeKey="/" onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
+      <Container>
+      <Nav activeKey="/home" onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
 >
-        <Nav.Link ><Navbar.Brand href="#home"><img
+        <Nav.Link><Navbar.Brand href="#"><img
         src={logo}
         width="70"
         height="50"
         className="d-inline-block align-top"
         alt="React Bootstrap logo"
-      />
-      </Navbar.Brand> 
-      </Nav.Link>
-        <Form className="d-flex"size="" onSubmit= {handleSubmit}>
+      /></Navbar.Brand> </Nav.Link>
+        <Form className="d-flex w-50" onSubmit= {handleSubmit}>
         <FormControl
-             
-
-          type="search" 
+          type="search"
           placeholder="busca una actividad, un lugar..."
-          className="me2"
+          className="me-2"
           aria-label="Search"
           onChange= {handleChange}
           value= {input}
-
         />
       </Form>
-
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto" >
             <Navbar.Text>
             <Nav.Link href="#">
-              <img 
+              <img
         src={userprofile}
         width="30"
         height="30"
-        className="d-inline-block align-end"
+        className="d-inline-block align-top"
         alt="React Bootstrap logo"
       />
           </Nav.Link>
-            </Navbar.Text> 
+            </Navbar.Text>
             <Nav.Link href="#"><img
         src={shoppingcart}
-        className="d-inline-block align-end"
+        width="30"
+        height="30"
+        className="d-inline-block align-top"
         alt="React Bootstrap logo"
       />
       </Nav.Link>
@@ -80,6 +75,12 @@ function Header (){
     <Outlet />
     </div>
     )
-} 
-
+}
 export default Header
+
+
+
+
+
+
+

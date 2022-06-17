@@ -6,11 +6,13 @@ import checkbox_icon from "../assets/checkbox_icon.svg"
 import Header from '../components/Header';
 import { Link } from 'react-router-dom';
 import arrowback from '../assets/arrowback.svg'
+import Footer from '../components/Footer';
+
 
 
 export default function Checkout() {
     return (
-        
+        <div>
             <div>
                 <Header/>
             <>
@@ -56,8 +58,7 @@ export default function Checkout() {
                 </Form.Group>
   
         </Form>
-        
-        
+
          
      
     <div className='shoppingcart'>
@@ -75,9 +76,9 @@ export default function Checkout() {
     </ul>
   </div>
 </div>
-
 </div>
-
-
-         );
+<footer /> 
+</div>
+);
   }
+ 

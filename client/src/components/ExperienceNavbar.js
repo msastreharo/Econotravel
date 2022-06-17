@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 
 
+
 const filterLugar = ["Montaña", "Playa", "Ciudad"];
 
 const ExperienceNavbar = ({setFilterLugar}) => (
@@ -12,12 +13,12 @@ const ExperienceNavbar = ({setFilterLugar}) => (
     <Navbar bg="light" expand="lg">
       <Container className="justify-content-center">
         <NavDropdown title="Ubicación" id="basic-nav-dropdown">
-          <NavDropdown.Item onClick={handleChange}>Montaña</NavDropdown.Item >
-          <NavDropdown.Item onClick={handleChange}>Playa</NavDropdown.Item>
-          <NavDropdown.Item onClick={handleChange}>Ciudad</NavDropdown.Item>
+          <NavDropdown.Item >Montaña</NavDropdown.Item >
+          <NavDropdown.Item >Playa</NavDropdown.Item>
+          <NavDropdown.Item >Ciudad</NavDropdown.Item>
                                                             </NavDropdown>
         <NavDropdown title="Transporte" id="basic-nav-dropdown">
-          <NavDropdown.Item onClick={handleChange}>Bicicleta</NavDropdown.Item>
+          <NavDropdown.Item >Bicicleta</NavDropdown.Item>
           <NavDropdown.Item href="#action/3.2">Barco</NavDropdown.Item>
           <NavDropdown.Item href="#action/3.3">A pie</NavDropdown.Item>
         </NavDropdown>
