@@ -10,6 +10,7 @@
 .ExperienceNavbar {
     margin-bottom: 3%;
     color: #000000;
+    
 }
 
 .cardImageExper {
@@ -37,7 +38,7 @@
     height: 2.3em;
 }
 
-                                                     /*CARRUSEL*/
+    /*CARRUSEL*/
 
 .carousel-item{
     height: 42em;
@@ -64,3 +65,22 @@
    height: 10vh; 
    border:1px solid gray;
   }
+
+     /*CONTADOR*/ 
+
+     .div-contador{
+        display: flex;
+        width:20%;
+        height: 7vh;
+        justify-content: space-around;
+        align-items: center;
+        border:4px green solid;
+        background-color: #4B7F55
+        ;
+     }
+
+     .div-contador p{
+        border:2px green solid;
+        margin-top: 15%;
+        background-color: #FFFFFF;
+     }

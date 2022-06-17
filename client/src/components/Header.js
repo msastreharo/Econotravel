@@ -2,7 +2,7 @@ import {Navbar, Button, FormControl, Form, Nav, Container} from 'react-bootstrap
 import logo from '../assets/fotos-header/logo-econo.png'
 import logoMono from '../assets/fotos-header/logoMono.png'
 import carritoDeCompra from '../assets/fotos-header/carrito-de-compra.jpg'
-import { Outlet, useNavigate } from "react-router-dom"
+import { Outlet, useNavigate, Link } from "react-router-dom"
 import { useState } from "react"
 
 
@@ -17,25 +17,29 @@ function Header (){
     }
     const handleSubmit= (e)=> {
       e.preventDefault()
-      navigate('/econoExperience/?search='+input)
+      navigate('/experiences/?search='+input)
       setInput('')
 
       
     }
 
     return( 
-      <div class="fixed-top">
+      <div className="d-flex justify-content-around">
       <Navbar bg="light" expand="lg">
       <Container>
       <Nav activeKey="/home" onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
 >
-        <Nav.Link><Navbar.Brand href="#"><img
+        <Nav.Link><Navbar.Brand href="#">
+        <Link to="/">
+        <img
         src={logo}
         width="70"
         height="50"
         className="d-inline-block align-top"
         alt="React Bootstrap logo"
-      /></Navbar.Brand> </Nav.Link>
+      />
+      </Link>
+      </Navbar.Brand> </Nav.Link>
         <Form className="d-flex w-50" onSubmit= {handleSubmit}>
         <FormControl
              

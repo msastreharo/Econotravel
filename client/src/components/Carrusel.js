@@ -1,8 +1,8 @@
 import React from "react"; 
 import {Carousel} from "react-bootstrap"; 
-import foto1 from "../assets/fotos-carrusel/carrusel1.jpg"
-import foto2 from "../assets/fotos-carrusel/carrusel2.jpg"
-import foto3 from "../assets/fotos-carrusel/carrusel3.jpg"
+import foto1 from "../assets/fotos-carrusel/CostaBrava.jpg"
+import foto2 from "../assets/fotos-carrusel/Playabcn.jpg"
+import foto3 from "../assets/fotos-carrusel/Montserrat.jpg"
 
 
 function Carrusel(){

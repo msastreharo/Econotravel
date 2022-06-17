@@ -1,11 +1,11 @@
 
+
 .navForm {
-    width: 100%;
     background-color: #4B7F55;
     height: 11.2em;
-    margin-top: 11.2em;
+    margin-top:5%;
+    margin-bottom: 5%;
     padding-top: 2em;
-    margin-bottom: 7em;
     color:white;
 }
 
