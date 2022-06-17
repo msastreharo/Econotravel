@@ -1,19 +1,20 @@
 import React from "react";
-
+import qrstyle from '../assets/qrstyle.jpg'
 
 function Footer (){
     return( 
-      <footer className="div-footer"> 
-        <div id="footer-div1">
-          <h4>Como funciona</h4>
-        </div>
-        <div id="footer-div2">
-          <h4>Quienes somos</h4>
-        </div>
-        <div id="footer-div3">
-          <h4>Medio de pago</h4>  
-        </div>
-      </footer>
+      <footer className="div-footer" > 
+        <ul className='infoFooter'>
+          <li>Nosotros</li>
+          <li>Cómo funciona</li>
+          <li>Medios de pago</li>
+          
+        </ul>
+        <div className='qrside'>
+      <h4 className='app'>Descargate la app</h4>
+    <img src= {qrstyle} className='qr' />      
+      </div>
+     </footer>
     )
 } 
 

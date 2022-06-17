@@ -3,11 +3,14 @@ import Form from 'react-bootstrap/Form';
 import  '../Styles/Checkout.css';
 import {Row, Col} from 'react-bootstrap';
 import checkbox_icon from "../assets/checkbox_icon.svg"
+import Header from '../components/Header';
 
 
 export default function Checkout() {
     return (
-        <div>
+        
+            <div>
+                <Header/>
             <>
             <div className="navForm">
                 <h2>Formulario de Reserva</h2>
