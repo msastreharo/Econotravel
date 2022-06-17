@@ -4,12 +4,8 @@ import axios from 'axios';
 import { useSearchParams } from 'react-router-dom';
 import Container from 'react-bootstrap/Container'
 import Footer from '../components/Footer.js'
-import Ubicacion from "../components/Filter/category/Ubicacion.js";
 import ExperienceNavbar from '../components/ExperienceNavbar.js';
-<<<<<<< HEAD
-=======
 import Header from '../components/Header.js';
->>>>>>> ffdfb40fb60ab982b5d4ef326b9d0d3668bb53eb
 
 const ExperienceGridCard = () =>  {
   const [searchParams, setSearchParams]= useSearchParams ()
@@ -85,7 +81,7 @@ const ExperienceGridCard = () =>  {
      
       </Row>
     </Container>
-    <Ubicacion />
+    
     <Footer />
     </div>
     
