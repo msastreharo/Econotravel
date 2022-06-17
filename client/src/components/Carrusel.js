@@ -40,7 +40,7 @@ function Carrusel(){
           />
       
           <Carousel.Caption>
-          <Link to="/experiences">Elige a donde quieres ir</Link>
+          <Link to="/experiences">Reserva y comienza tu aventura</Link>
           
           </Carousel.Caption>
         </Carousel.Item>

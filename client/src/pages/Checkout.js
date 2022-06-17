@@ -4,6 +4,8 @@ import  '../Styles/Checkout.css';
 import {Row, Col} from 'react-bootstrap';
 import checkbox_icon from "../assets/checkbox_icon.svg"
 import Header from '../components/Header';
+import { Link } from 'react-router-dom';
+import arrowback from '../assets/arrowback.svg'
 
 
 export default function Checkout() {
@@ -13,8 +15,8 @@ export default function Checkout() {
                 <Header/>
             <>
             <div className="navForm">
-                <h2>Formulario de Reserva</h2>
-                <p className="continuar">Continuar comprando</p>
+                <h2 className="titleForm">Formulario de Reserva</h2>
+                <Link to="/experiences" className="goBack"> <img src={arrowback} /> <p className="continuar">Continuar comprando</p> </Link>
             </div>
             </>
             <div className="formRegister">
@@ -55,14 +57,17 @@ export default function Checkout() {
   
         </Form>
         
+        
          
      
     <div className='shoppingcart'>
-    <h2>Experiencia Reservada</h2>
-    <p>250€</p>
+    <div className='payvalue'>
+        <h2 className='titleShop'>Experiencia Reservada</h2>
+        <p className='paymoney'>250€</p>
     <p>Paseo en Bicicleta por el Montseny</p>
-<button className="reservabtn">Reservar</button>
-<h3>Garantías econotravel</h3>
+    <button className="reservabtn">Reservar</button>
+    </div>
+<h3 className='titleShop'>Garantías econotravel</h3>
 <ul className='checkbox'>
     <li><img src={checkbox_icon} />99% de clientes satisfechos</li>
     <li><img src={checkbox_icon} />Colaboradores de calidad</li>
