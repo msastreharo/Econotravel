@@ -10,7 +10,7 @@ function PaginasExperiences() {
   const {id}=useParams()
   const [experiences, setExperiences]= useState([id])
 
-  useEffect(() => {
+  useEffect((id) => {
     const promise = axios.get("http://localhost:3000/econoExperience")
 
   promise.then((response) => {
@@ -26,7 +26,7 @@ function PaginasExperiences() {
     <>
     <Header />
     <section className="container-paginasexperiences"> 
-     <img src={experiences.imagen} className="headshot foto"></img>
+     <img src={experiences.imagen} className="headshot foto" alt=''></img>
       <Card style={{ width: "40rem" }} className="ml-4">
         <Card.Body>
           <Card.Title>{experiences.nombre}</Card.Title>

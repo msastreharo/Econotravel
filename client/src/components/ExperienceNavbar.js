@@ -5,9 +5,9 @@ import NavDropdown from 'react-bootstrap/NavDropdown'
 
 
 
-const filterLugar = ["Montaña", "Playa", "Ciudad"];
+// const filterLugar = ["Montaña", "Playa", "Ciudad"];
 
-const ExperienceNavbar = ({setFilterLugar}) => (
+const ExperienceNavbar = () => (
   
   <div className="ExperienceNavbar"> 
     <Navbar bg="light" expand="lg">

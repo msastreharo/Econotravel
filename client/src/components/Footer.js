@@ -22,7 +22,7 @@ function Footer (){
         </ul>
         <div className='qrside'>
       <h4 className='app'>Descargate la app</h4>
-    <img src= {qrstyle} className='qr' />      
+    <img src= {qrstyle} className='qr' alt='' />      
       </div>
      </footer>
     )
